@@ -10,27 +10,6 @@ Using Go, write a command line tool that consumes the first `20` `even` numbered
 
 Ensure you are submitting the code along with cli.
 
-## Judging Criteria
+localhost:8000/todo => It will give first 20 to do items with status
 
-- Engineering principles & standards
-- System extensibility & Scalability
-- Test coverage
-- Brevity and Simplicity
-
-## Bonus Points
-
-- Docker
-
-## FAQ
-
-### What is the time-limit on exercise ?
-
-There is none, ensure you submit your best attempt and as soon as you possibly can.
-
-### How to submit ?
-
-Submit a GitHub / Bitbucket repo for review. No ZIP files!
-
-### Do I need to write tests for connecting to API ?
-
-That can be ommitted.
+localhost:8000/todo/:id => based on id it will give specific to do item with status

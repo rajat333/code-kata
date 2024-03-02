@@ -6,6 +6,7 @@ const router = express.Router();
 
 /* GET home page. */
 router.get('/', healthCheck);
+router.get("/todo", Todo.fetchToDos);
 router.get("/todo/:id", Todo.fetchSpecificToDo);
 
 export default router;

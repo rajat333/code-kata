@@ -4,7 +4,7 @@ export class Todo {
 
     constructor() { }
 
-    async fetchToDos() {
+    static async fetchToDos(_req: any, res: any) {
         const todos: Array<any> = [];
 
         // Fetch the first 20 even-numbered TODOs
@@ -15,10 +15,9 @@ export class Todo {
         for (const todo of todos) {
             const completed = todo.completed ? 'Completed' : 'Incomplete';
             todo.completed = completed;
-            console.log(`Title: ${todo.title}, Completed: ${completed}`);
         }
 
-        return todos;
+        res.send(todos);
     }
 
     static async fetchSpecificToDo(req: any, res: any) {
