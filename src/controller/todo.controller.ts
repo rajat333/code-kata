@@ -9,11 +9,13 @@ export class Todo {
     static async fetchToDos(_req: any, res: any) {
         try {
             const todos: Array<any> = [];
-            
+            const response = await getRequest(`${JSON_API_URL}`);
+            const data = response?.data;
             // Fetch the first 20 even-numbered TODOs
-            for (let i = 2; i <= 40; i += 2) {
-                const response = await getRequest(`${JSON_API_URL}/${i}`);
-                todos.push(response.data);
+            let index = 2;
+            while (index <= 40) {
+                todos.push(data[index - 1]);
+                index = index + 2;
             }
             for (const todo of todos) {
                 const completed = todo.completed ? 'Completed' : 'Incomplete';
