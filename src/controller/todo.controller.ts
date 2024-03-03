@@ -2,7 +2,7 @@ import { handleError } from "../helpers/error";
 import { getRequest } from "../utils/axios";
 import { JSON_API_URL } from "../utils/constants";
 
-export class Todo {
+export default class Todo {
 
     constructor() { }
 

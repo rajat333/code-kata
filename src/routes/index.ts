@@ -1,6 +1,6 @@
 import express from 'express';
 import {healthCheck} from '../handlers/healthcheck';
-import { Todo } from '../controller/todo.controller';
+import Todo from '../controller/todo.controller';
 
 const router = express.Router();
 
